@@ -1,0 +1,613 @@
+:root {
+  --creme: #f5ead8;
+  --creme-clair: #f9f4ed;
+  --beige: #ebddc5;
+  --encre: #201e1d;
+  --encre-douce: #474238;
+  --encre-pale: #645c50;
+  --terre: #c67139;
+  --terre-foncee: #8c491a;
+  --terre-claire: #f6a06b;
+  --vert: #e1eecc;
+  --vert-pale: #f0fae1;
+  --vert-encre: #3d472b;
+  --sombre: #2e2b25;
+  --sombre-texte: #dcd3c4;
+  --ombre: 0 3px 10px rgba(46, 43, 37, 0.16);
+  --ombre-forte: 0 12px 32px rgba(46, 43, 37, 0.22);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--creme);
+  color: var(--encre);
+  font-family: var(--police-corps), system-ui, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--police-titres), serif;
+  font-weight: 400;
+  text-wrap: pretty;
+}
+
+a {
+  color: var(--terre-foncee);
+}
+
+a:hover {
+  color: #b2622d;
+}
+
+img {
+  display: block;
+}
+
+.enveloppe {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+.lavee img {
+  filter: saturate(0.6) contrast(0.85) brightness(1.1) opacity(0.94);
+}
+
+/* ---------- En-tête ---------- */
+
+.entete {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(245, 234, 216, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(32, 30, 29, 0.08);
+}
+
+.entete-interieur {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.marque {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--encre);
+}
+
+.pastille {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: var(--terre);
+  display: block;
+  flex: none;
+}
+
+.marque-nom {
+  font-family: var(--police-titres), serif;
+  font-size: 17px;
+  line-height: 1.1;
+}
+
+.navigation {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.lien-nav {
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--encre-douce);
+}
+
+.lien-nav:hover {
+  color: var(--encre);
+}
+
+/* ---------- Boutons ---------- */
+
+.bouton {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-family: var(--police-titres), serif;
+  font-size: 16px;
+  text-decoration: none;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.bouton:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+.bouton-principal {
+  background: var(--terre);
+  color: var(--creme-clair);
+  box-shadow: var(--ombre);
+}
+
+.bouton-principal:hover {
+  color: var(--creme-clair);
+}
+
+.bouton-secondaire {
+  background: transparent;
+  border: 1px solid rgba(32, 30, 29, 0.25);
+  color: var(--encre);
+}
+
+.bouton-secondaire:hover {
+  color: var(--encre);
+}
+
+.bouton-clair {
+  background: var(--terre-claire);
+  color: #402310;
+}
+
+.bouton-clair:hover {
+  color: #402310;
+}
+
+.bouton-contour-clair {
+  border: 1px solid rgba(249, 244, 237, 0.35);
+  color: var(--creme-clair);
+}
+
+.bouton-contour-clair:hover {
+  color: var(--creme-clair);
+}
+
+.bouton-compact {
+  padding: 11px 22px;
+  font-size: 14px;
+}
+
+.groupe-boutons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* ---------- Héros ---------- */
+
+.heros {
+  padding-top: 72px;
+  padding-bottom: 88px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.etiquette {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--vert);
+  color: var(--vert-encre);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.heros h1 {
+  font-size: 56px;
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  margin: 22px 0 20px;
+}
+
+.heros p {
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--encre-douce);
+  max-width: 30em;
+  margin: 0 0 32px;
+  text-wrap: pretty;
+}
+
+.heros-visuel {
+  position: relative;
+  height: 460px;
+}
+
+.heros-rond {
+  position: absolute;
+  right: -70px;
+  top: -40px;
+  width: 220px;
+  height: 220px;
+  border-radius: 999px;
+  background: var(--vert);
+  display: block;
+}
+
+.heros-cadre {
+  position: absolute;
+  inset: 0;
+  border-radius: 220px 220px 32px 220px;
+  overflow: hidden;
+  box-shadow: var(--ombre-forte);
+}
+
+/* ---------- Sections ---------- */
+
+.section-beige {
+  background: var(--beige);
+  padding: 88px 0;
+}
+
+.sur-titre {
+  font-family: var(--police-corps), sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--terre-foncee);
+  margin: 0 0 14px;
+}
+
+.titre-section {
+  font-size: 38px;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+
+.duo {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.mission-texte {
+  display: grid;
+  gap: 20px;
+}
+
+.mission-texte p {
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--encre-douce);
+  margin: 0;
+  text-wrap: pretty;
+}
+
+.piluliers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.pilulier {
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.pilulier-sante {
+  background: #fff2eb;
+  color: var(--terre-foncee);
+}
+
+.pilulier-education {
+  background: var(--vert-pale);
+  color: var(--vert-encre);
+}
+
+.pilulier-espoir {
+  background: var(--creme-clair);
+  color: var(--encre-pale);
+}
+
+/* ---------- Actions ---------- */
+
+.actions {
+  padding: 88px 0;
+}
+
+.actions-intro {
+  font-size: 17px;
+  color: var(--encre-pale);
+  margin: 12px 0 44px;
+  max-width: 34em;
+}
+
+.grille-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.carte {
+  background: var(--creme-clair);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: var(--ombre);
+}
+
+.carte-visuel {
+  position: relative;
+  height: 190px;
+}
+
+.carte-corps {
+  padding: 26px 26px 30px;
+}
+
+.carte-corps h3 {
+  font-size: 23px;
+  margin: 0 0 10px;
+}
+
+.carte-corps p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--encre-douce);
+  margin: 0;
+}
+
+/* ---------- Parrainage ---------- */
+
+.parrainage {
+  background: var(--sombre);
+  color: var(--creme-clair);
+  padding: 92px 0;
+}
+
+.parrainage-grille {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.parrainage .sur-titre {
+  color: var(--terre-claire);
+  margin-bottom: 16px;
+}
+
+.parrainage h2 {
+  font-size: 40px;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  margin: 0 0 20px;
+}
+
+.parrainage p {
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--sombre-texte);
+  margin: 0 0 12px;
+  max-width: 32em;
+}
+
+.montant {
+  font-size: 20px;
+  font-family: var(--police-titres), serif;
+  color: var(--creme-clair);
+  margin: 0 0 30px;
+}
+
+.parrainage-visuel {
+  position: relative;
+  height: 380px;
+}
+
+.parrainage-cadre {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px 40px 999px 999px;
+  overflow: hidden;
+}
+
+/* ---------- Contact ---------- */
+
+.contact {
+  padding: 92px 0;
+}
+
+.contact-intro {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--encre-pale);
+  margin: 18px 0 0;
+  max-width: 26em;
+}
+
+.bloc-courriel {
+  background: var(--beige);
+  border-radius: 28px;
+  padding: 40px;
+  display: grid;
+  gap: 18px;
+  justify-items: start;
+}
+
+.bloc-courriel-intitule {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--encre-douce);
+  margin: 0;
+}
+
+.adresse-courriel {
+  font-family: var(--police-titres), serif;
+  font-size: 30px;
+  line-height: 1.2;
+  color: var(--terre-foncee);
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.adresse-courriel:hover {
+  text-decoration: underline;
+}
+
+.bloc-courriel-note {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--encre-pale);
+  margin: 0;
+}
+
+.reseaux {
+  font-size: 14px;
+  color: var(--encre-pale);
+  margin: 0;
+}
+
+.reseaux strong {
+  color: var(--terre-foncee);
+}
+
+/* ---------- Pied de page ---------- */
+
+.pied {
+  background: var(--beige);
+  padding: 44px 0;
+}
+
+.pied-interieur {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+.pied-marque {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pastille-petite {
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: var(--terre);
+  display: block;
+}
+
+.pied-nom {
+  font-family: var(--police-titres), serif;
+  font-size: 15px;
+}
+
+.pied-mention {
+  font-size: 14px;
+  color: var(--encre-pale);
+}
+
+.pied-reseau {
+  margin-left: auto;
+  font-size: 14px;
+  color: var(--encre-pale);
+}
+
+/* ---------- Adaptatif ---------- */
+
+@media (max-width: 900px) {
+  .heros,
+  .duo,
+  .parrainage-grille {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .grille-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .heros h1 {
+    font-size: 40px;
+  }
+
+  .titre-section,
+  .parrainage h2 {
+    font-size: 30px;
+  }
+
+  .heros-visuel {
+    height: 340px;
+  }
+
+  .heros-rond {
+    right: -40px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .heros-cadre {
+    border-radius: 160px 160px 28px 160px;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .section-beige,
+  .actions,
+  .parrainage,
+  .contact {
+    padding: 56px 0;
+  }
+
+  .heros {
+    padding-top: 48px;
+    padding-bottom: 56px;
+  }
+
+  .pied-reseau {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .enveloppe {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .heros h1 {
+    font-size: 34px;
+  }
+
+  .bloc-courriel {
+    padding: 28px;
+  }
+
+  .adresse-courriel {
+    font-size: 21px;
+  }
+}
