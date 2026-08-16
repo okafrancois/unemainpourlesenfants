@@ -443,16 +443,22 @@ img {
   max-width: 26em;
 }
 
-.bloc-courriel {
+.bloc-contact {
   background: var(--beige);
   border-radius: 28px;
   padding: 40px;
   display: grid;
-  gap: 18px;
+  gap: 22px;
   justify-items: start;
 }
 
-.bloc-courriel-intitule {
+.coordonnee {
+  display: grid;
+  gap: 8px;
+  justify-items: start;
+}
+
+.coordonnee-intitule {
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -461,7 +467,7 @@ img {
   margin: 0;
 }
 
-.adresse-courriel {
+.coordonnee-valeur {
   font-family: var(--police-titres), serif;
   font-size: 30px;
   line-height: 1.2;
@@ -470,11 +476,11 @@ img {
   word-break: break-word;
 }
 
-.adresse-courriel:hover {
+.coordonnee-valeur:hover {
   text-decoration: underline;
 }
 
-.bloc-courriel-note {
+.bloc-contact-note {
   font-size: 15px;
   line-height: 1.6;
   color: var(--encre-pale);
@@ -603,11 +609,11 @@ img {
     font-size: 34px;
   }
 
-  .bloc-courriel {
+  .bloc-contact {
     padding: 28px;
   }
 
-  .adresse-courriel {
+  .coordonnee-valeur {
     font-size: 21px;
   }
 }

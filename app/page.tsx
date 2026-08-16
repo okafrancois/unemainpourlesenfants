@@ -1,6 +1,8 @@
 import Image from "next/image";
 
 const COURRIEL = "unemainpourlesenfants@gmail.com";
+const TELEPHONE = "+33774974251";
+const TELEPHONE_AFFICHE = "+33 7 74 97 42 51";
 const MONTANT_MENSUEL = 25;
 
 const ACTIONS = [
@@ -200,14 +202,22 @@ export default function Accueil() {
                 à tout le monde.
               </p>
             </div>
-            <div className="bloc-courriel">
-              <p className="bloc-courriel-intitule">Notre adresse e-mail</p>
-              <a href={`mailto:${COURRIEL}`} className="adresse-courriel">
-                {COURRIEL}
-              </a>
-              <p className="bloc-courriel-note">
-                Écrivez-nous directement : précisez votre nom et ce qui vous
-                amène, nous vous répondons sous quelques jours.
+            <div className="bloc-contact">
+              <div className="coordonnee">
+                <p className="coordonnee-intitule">Notre adresse e-mail</p>
+                <a href={`mailto:${COURRIEL}`} className="coordonnee-valeur">
+                  {COURRIEL}
+                </a>
+              </div>
+              <div className="coordonnee">
+                <p className="coordonnee-intitule">Par téléphone</p>
+                <a href={`tel:${TELEPHONE}`} className="coordonnee-valeur">
+                  {TELEPHONE_AFFICHE}
+                </a>
+              </div>
+              <p className="bloc-contact-note">
+                Écrivez-nous ou appelez-nous directement : précisez votre nom et
+                ce qui vous amène, nous vous répondons sous quelques jours.
               </p>
               <p className="reseaux">
                 ou sur les réseaux : <strong>@unemainpourlesenfants</strong>
