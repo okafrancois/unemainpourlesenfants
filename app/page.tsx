@@ -163,9 +163,6 @@ export default function Accueil() {
                 santé d&apos;un enfant sur une année entière. Vous recevez des
                 nouvelles régulières et le bilan de ce qui a été financé.
               </p>
-              <p className="montant">
-                À partir de {MONTANT_MENSUEL} € par mois
-              </p>
               <div className="groupe-boutons">
                 <a
                   href={`mailto:${COURRIEL}?subject=Je%20souhaite%20parrainer%20un%20enfant`}
